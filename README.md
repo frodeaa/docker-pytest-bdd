@@ -1,6 +1,6 @@
 # docker-pytest-bdd
 
-Testing applications using [pytest-bdd](https://pypi.python.org/pypi/pytest-bdd).
+Testing applications using [pytest-bdd].
 
 Simplify running pytest-bdd in docker/docker-compose.
 
@@ -26,8 +26,14 @@ run with volume mount
 The docker image installs many useful libraries
 for testing REST APIs with pytest-bdd.
 
- - [bravado_core](https://github.com/Yelp/bravado-core): support for the OpenAPI Specification v2.0. (Swagger 2)
- - [PyJWT](https://pyjwt.readthedocs.io/en/latest/): JSON Web Token implementation in Python
- - [Requests](http://docs.python-requests.org/en/master/): HTTP for Humans
+ - [bravado_core]: support for the OpenAPI Specification v2.0. (Swagger 2)
+ - [PyJWT]: JSON Web Token implementation in Python
+ - [Requests]: HTTP for Humans
 
-See the [Dockerfile](./Dockerfile) for complete list of libraries installed.
+See the [Dockerfile] for complete list of libraries installed.
+
+[Dockerfile]: https://github.com/frodeaa/docker-pytest-bdd/blob/master/Dockerfile
+[pytest-bdd]: https://pypi.python.org/pypi/pytest-bdd
+[bravado_core]: https://github.com/Yelp/bravado-core
+[PyJWT]: https://pyjwt.readthedocs.io/en/latest
+[Requests]: http://docs.python-requests.org/en/master/

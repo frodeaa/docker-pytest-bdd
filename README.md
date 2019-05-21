@@ -30,9 +30,9 @@ for testing REST APIs with pytest-bdd.
  - [PyJWT]: JSON Web Token implementation in Python
  - [Requests]: HTTP for Humans
 
-See the [Dockerfile] for complete list of libraries installed.
+See the [requirements.txt] for complete list of libraries installed.
 
-[Dockerfile]: https://github.com/frodeaa/docker-pytest-bdd/blob/master/Dockerfile
+[Dockerfile]: https://github.com/frodeaa/docker-pytest-bdd/blob/master/requirements.txt
 [pytest-bdd]: https://pypi.python.org/pypi/pytest-bdd
 [bravado_core]: https://github.com/Yelp/bravado-core
 [PyJWT]: https://pyjwt.readthedocs.io/en/latest

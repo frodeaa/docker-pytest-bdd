@@ -1,7 +1,7 @@
 asn1crypto==0.24.0
 atomicwrites==1.2.1
 attrs==18.2.0
-awscli==1.16.223
+boto3==1.9.213
 bravado-core==5.12.1
 certifi==2018.11.29
 cffi==1.11.5

@@ -1,7 +1,7 @@
 import requests
 
 from pytest_bdd import (
-    scenarios, given, when, then
+    scenarios, given, when, then, parsers
 )
 
 
@@ -10,10 +10,11 @@ def request_ctx(url):
     return dict(url=url)
 
 
-@when('I request GET')
-def request_get(request_ctx):
-    request_ctx['response'] = requests.get(
-        request_ctx['url']
+@when(parsers.parse("I request {method}"))
+def request_get(request_ctx, method):
+    request_ctx['response'] = requests.request(
+        method.lower(),
+        request_ctx['url'],
     )
 
 
@@ -24,5 +25,6 @@ def assert_response_status(request_ctx, status):
 
 
 scenarios(
-    'http_get.feature'
+    'http_get.feature',
+    'http_post.feature'
 )

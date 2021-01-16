@@ -19,7 +19,22 @@ run with volume mount
       -v $(pwd)/example:/example \
       -w /example \
       frodeaa/docker-pytest-bdd \
-        pytest -vv --gherkin-terminal-reporter
+        pytest -vv \
+          --gherkin-terminal-reporter \
+          --cucumberjson-expanded
+
+    # run pytest -h to get help on all options
+    docker run frodeaa/docker-pytest-bdd pytest -h
+
+    # only run test with match the given substring expression
+    docker run \
+      -v $(pwd)/example:/example \
+      -w /example \
+      frodeaa/docker-pytest-bdd \
+        pytest -vv \
+          --gherkin-terminal-reporter \
+          --cucumberjson-expanded \
+          -k post
 
 ## Installed Libraries
 

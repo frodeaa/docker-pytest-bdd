@@ -46,7 +46,7 @@ simplejson==3.17.0
 six==1.14.0
 strict-rfc3339==0.7
 swagger-spec-validator==2.4.3
-urllib3==1.25.8
+urllib3==1.26.5
 wcwidth==0.1.8
 webcolors==1.10
 zipp==2.0.1

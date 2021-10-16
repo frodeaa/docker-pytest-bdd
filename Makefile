@@ -12,4 +12,7 @@ test:
 	-w /example $(TAG) \
 	pytest
 
+publish: build
+	docker push $(TAG)
+
 install: build test

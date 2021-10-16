@@ -1,15 +1,15 @@
 
 TAG ?= frodeaa/docker-pytest-bdd
-PYTEST_OPTS ?=-vv --gherkin-terminal-reporter --cucumberjson-expanded
-
+PYTEST_ADDOPTS ?=-vv --gherkin-terminal-reporter --cucumberjson-expanded
 
 build:
 	@docker build -t $(TAG) .
 
 test:
 	@docker run \
+	-e PYTEST_ADDOPTS="$(PYTEST_ADDOPTS)" \
 	-v $(CURDIR)/example:/example \
 	-w /example $(TAG) \
-	pytest $(PYTEST_OPTS)
+	pytest
 
 install: build test
